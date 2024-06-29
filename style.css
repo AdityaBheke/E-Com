@@ -40,6 +40,7 @@ body, html {
     color: #fd7e68;
     transition: color ease-in-out 0.2s;
 }
+/* Hero */
 #hero{
     background-color: 
     #ff6347;
@@ -60,6 +61,7 @@ body, html {
     color: white;
     padding: 0.8em 2em;
     border: none;
+    margin-bottom: 2em;
 }
 .hero-button:hover{
     background-color: #ff2600;
@@ -69,6 +71,11 @@ body, html {
 .section-heading{
     font-size: 2em;
     margin: 2em auto;
+}
+.offer-message{
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 /* Card */
@@ -81,6 +88,10 @@ body, html {
     background-color: white;
     padding: 1em;
     border-radius: 10px;
+    transition: transform 0.2s linear;
+}
+.card:hover{
+    transform: scale(1.05);
 }
 .card-image-container{
     width: 100%;
@@ -89,6 +100,24 @@ body, html {
     border-radius: 10px;
     width: 100%;
     height: auto;
+}
+/* Comparison Table */
+.comparison-table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ff6347;
+}
+.comparison-table th{
+    background-color: #ff6347;
+    color: white;
+    padding: 0.8em;
+}
+.comparison-table td{
+    background-color: white;
+    padding: 0.8em;
+}
+.comparison-table th,.comparison-table td{
+    border: 1px solid #c8c8c8;
 }
 /* Testimony */
 #testimony{
@@ -142,7 +171,7 @@ body, html {
     gap: 1.5em;
 }
 .form-input{
-    padding: 0.5em;
+    padding: 0.7em;
 }
 .form-submit{
     padding: 0.5em;
@@ -166,4 +195,14 @@ body, html {
 }
 #signup-container:target{
     display: block;
+}
+
+/* Media queries */
+@media screen and (max-width:480px) {
+    .navbar{
+        flex-wrap: wrap;
+    }
+    .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
