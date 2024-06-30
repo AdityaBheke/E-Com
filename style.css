@@ -51,17 +51,23 @@ body, html {
 .hero-heading{
     font-size: 2.5em;
     margin-bottom: 1em;
+    /* Animation */
+    animation: flash 0.7s ease-in;
 }
 .hero-msg{
     font-size: 1.3em;
     margin-bottom: 2em;
+    /* Animation */
+    animation: flash 0.7s ease-in;
 }
 .hero-button{
+    display: inline-block;
     background-color: #333;
     color: white;
     padding: 0.8em 2em;
     border: none;
     margin-bottom: 2em;
+    text-decoration: none;
 }
 .hero-button:hover{
     background-color: #ff2600;
@@ -76,6 +82,9 @@ body, html {
     padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    /* Animation */
+    animation: flash 0.7s ease-in;
+    /* animation: flash 0.7s ease-in-out infinite alternate; */
 }
 
 /* Card */
@@ -100,6 +109,8 @@ body, html {
     border-radius: 10px;
     width: 100%;
     height: auto;
+    /* Animation */
+    animation: upwardFadeIn 0.7s ease-in;
 }
 /* Comparison Table */
 .comparison-table{
@@ -201,8 +212,28 @@ body, html {
 @media screen and (max-width:480px) {
     .navbar{
         flex-wrap: wrap;
+        justify-content: center;
     }
     .card-container{
         grid-template-columns: repeat(2,1fr);
+    }
+}
+/* Animations  */
+@keyframes flash {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes upwardFadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
