@@ -109,9 +109,16 @@ body, html {
 .card-image-container img{
     border-radius: 10px;
     width: 100%;
-    height: auto;
+    height: 250px;
     /* Animation */
     animation: upwardFadeIn 0.7s ease-in;
+}
+.card-title{
+    height: 60px;
+    overflow: hidden;
+}
+.card-product-price{
+    color: #ff6347;
 }
 /* Comparison Table */
 .comparison-table{
